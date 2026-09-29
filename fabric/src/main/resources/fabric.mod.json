@@ -1,0 +1,36 @@
+{
+    "schemaVersion": 1,
+    "id": "${mod_id}",
+    "version": "${version}",
+    "name": "${mod_name}",
+    "description": "${description}",
+    "authors": [
+        "${mod_author}"
+    ],
+    "contact": {
+        "homepage": "https://github.com/link-fgfgui/jei-patternizer",
+        "sources": "https://github.com/link-fgfgui/jei-patternizer"
+    },
+    "license": "${license}",
+    "environment": "client",
+    "entrypoints": {
+        "main": [
+            "io.github.linkfgfgui.jeipatternizer.JeiPatternizer"
+        ],
+        "client": [
+            "io.github.linkfgfgui.jeipatternizer.fabric.client.JeiPatternizerClient"
+        ]
+    },
+    "mixins": [
+        "${mod_id}.mixins.json",
+        "${mod_id}.fabric.mixins.json"
+    ],
+    "depends": {
+        "fabricloader": ">=0.14",
+        "fabric": "*",
+        "minecraft": "${minecraft_version}",
+        "java": ">=17",
+        "jei": "${jei_version_range_fabric}",
+        "jeicrafter": "${jeicrafter_version_range_fabric}"
+    }
+}
