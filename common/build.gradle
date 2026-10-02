@@ -16,16 +16,25 @@ legacyForge {
 
 dependencies {
     compileOnly group: 'org.spongepowered', name: 'mixin', version: '0.8.5'
+    compileOnly group: 'org.ow2.asm', name: 'asm-tree', version: '9.5'
     implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
     compileOnly "mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"
     compileOnly "mezz.jei:jei-${minecraft_version}-common:${jei_version}"
     compileOnly "mezz.jei:jei-${minecraft_version}-gui:${jei_version}"
     compileOnly "mezz.jei:jei-${minecraft_version}-lib:${jei_version}"
     compileOnly "${jeicrafter_group}:jeicrafter-${project.name}-${minecraft_version}:${jeicrafter_version}"
+    modCompileOnly "maven.modrinth:ae2:${ae2_version}-forge"
 }
 
 repositories {
     mavenLocal()
+    maven {
+        name = 'Modrinth'
+        url = 'https://api.modrinth.com/maven'
+        content {
+            includeGroup 'maven.modrinth'
+        }
+    }
 }
 
 configurations {

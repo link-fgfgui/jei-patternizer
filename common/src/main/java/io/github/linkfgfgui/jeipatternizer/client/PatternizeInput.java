@@ -1,11 +1,10 @@
 package io.github.linkfgfgui.jeipatternizer.client;
 
-import io.github.linkfgfgui.jeipatternizer.Constants;
 import net.minecraft.client.gui.screens.Screen;
 
 /**
- * Platform-neutral key hook. Encoding is not implemented yet; this only proves the MDK wires
- * screen input through to common code.
+ * Platform-neutral key hook. Pressing the patternize key while an AE2/RS encoding terminal is
+ * open starts a batch encode session for the recipe page currently shown in JEI.
  */
 public final class PatternizeInput {
 
@@ -16,9 +15,6 @@ public final class PatternizeInput {
 		if (!JeiPatternizerKeys.isPatternizeKey(keyCode, scanCode)) {
 			return;
 		}
-		Constants.LOG.info(
-			"Patternize key pressed on {}",
-			screen == null ? "null" : screen.getClass().getName()
-		);
+		PatternizerSession.requestStart(screen);
 	}
 }

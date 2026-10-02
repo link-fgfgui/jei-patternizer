@@ -13,6 +13,7 @@ public class JeiPatternizer {
 		CommonClass.init();
 		if (FMLLoader.getDist() == Dist.CLIENT) {
 			MinecraftForge.EVENT_BUS.addListener(ForgeGameEvents::onScreenKeyPressed);
+			MinecraftForge.EVENT_BUS.addListener(ForgeGameEvents::onScreenOpening);
 		}
 	}
 }

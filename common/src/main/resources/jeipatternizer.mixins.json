@@ -4,10 +4,18 @@
     "package": "io.github.linkfgfgui.jeipatternizer.mixin",
     "refmap": "${mod_id}.refmap.json",
     "compatibilityLevel": "JAVA_17",
+    "plugin": "io.github.linkfgfgui.jeipatternizer.mixin.MixinPlugin",
     "mixins": [
     ],
     "client": [
-        "KeyMappingAccessor"
+        "KeyMappingAccessor",
+        "MinecraftMixin",
+        "AbstractContainerScreenMixin",
+        "jei.RecipesGuiAccessor",
+        "jei.BookmarkOverlayAccessor",
+        "ae2.AEBaseScreenAccessor",
+        "ae2.WidgetContainerAccessor",
+        "ae2.PatternAccessTermScreenAccessor"
     ],
     "server": [
     ],

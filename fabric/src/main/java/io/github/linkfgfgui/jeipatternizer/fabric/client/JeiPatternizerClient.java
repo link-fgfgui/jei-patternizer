@@ -2,6 +2,7 @@ package io.github.linkfgfgui.jeipatternizer.fabric.client;
 
 import io.github.linkfgfgui.jeipatternizer.client.JeiPatternizerKeys;
 import io.github.linkfgfgui.jeipatternizer.client.PatternizeInput;
+import io.github.linkfgfgui.jeipatternizer.client.ReloadMemory;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.fabricmc.fabric.api.client.screen.v1.ScreenEvents;
@@ -13,10 +14,11 @@ public class JeiPatternizerClient implements ClientModInitializer {
 	public void onInitializeClient() {
 		KeyBindingHelper.registerKeyBinding(JeiPatternizerKeys.PATTERNIZE);
 
-		ScreenEvents.AFTER_INIT.register((client, screen, scaledWidth, scaledHeight) ->
+		ScreenEvents.AFTER_INIT.register((client, screen, scaledWidth, scaledHeight) -> {
+			ReloadMemory.onScreenOpening(screen);
 			ScreenKeyboardEvents.afterKeyPress(screen).register((openScreen, key, scancode, modifiers) ->
 				PatternizeInput.onKeyPressed(key, scancode, openScreen)
-			)
-		);
+			);
+		});
 	}
 }

@@ -19,6 +19,9 @@
         ],
         "client": [
             "io.github.linkfgfgui.jeipatternizer.fabric.client.JeiPatternizerClient"
+        ],
+        "jei_mod_plugin": [
+            "io.github.linkfgfgui.jeipatternizer.fabric.jei.FabricJeiPlugin"
         ]
     },
     "mixins": [

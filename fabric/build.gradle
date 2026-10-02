@@ -14,6 +14,8 @@ dependencies {
     modCompileOnly "mezz.jei:jei-${minecraft_version}-fabric:${jei_version}"
     modLocalRuntime "mezz.jei:jei-${minecraft_version}-fabric:${jei_version}"
     modImplementation "${jeicrafter_group}:jeicrafter-fabric-${minecraft_version}:${jeicrafter_version}"
+    modCompileOnly "maven.modrinth:ae2:${ae2_version}-fabric"
+    compileOnly group: 'org.ow2.asm', name: 'asm-tree', version: '9.5'
     implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
     implementation project(":common")
 }
@@ -24,6 +26,13 @@ repositories {
     maven {
         name = 'Fuzs Mod Resources'
         url = 'https://raw.githubusercontent.com/Fuzss/modresources/main/maven/'
+    }
+    maven {
+        name = 'Modrinth'
+        url = 'https://api.modrinth.com/maven'
+        content {
+            includeGroup 'maven.modrinth'
+        }
     }
 }
 

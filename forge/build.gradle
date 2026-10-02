@@ -54,10 +54,24 @@ dependencies {
     compileOnly "mezz.jei:jei-${minecraft_version}-lib:${jei_version}"
     modRuntimeOnly "mezz.jei:jei-${minecraft_version}-forge:${jei_version}"
     modImplementation "${jeicrafter_group}:jeicrafter-forge-${minecraft_version}:${jeicrafter_version}"
+    compileOnly group: 'org.ow2.asm', name: 'asm-tree', version: '9.5'
+    modCompileOnly "maven.modrinth:ae2:${ae2_version}-forge"
+    // AE2 and its friends are only pulled in for development runs; they must come from Gradle
+    // (not from run/mods) so the toolchain remaps their mixins into the dev mappings.
+    modRuntimeOnly "maven.modrinth:ae2:${ae2_version}-forge"
+    modRuntimeOnly "maven.modrinth:guideme:${guideme_version}"
+    modRuntimeOnly "com.justenoughtaglib:justenoughtaglib-forge-${minecraft_version}:${justenoughtaglib_version}"
 }
 
 repositories {
     mavenLocal()
+    maven {
+        name = 'Modrinth'
+        url = 'https://api.modrinth.com/maven'
+        content {
+            includeGroup 'maven.modrinth'
+        }
+    }
 }
 
 jar {

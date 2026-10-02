@@ -1,5 +1,16 @@
 {
   "key.categories.jeipatternizer": "JEI Patternizer",
   "key.jeipatternizer.patternize": "Encode Patterns",
-  "chat.jeipatternizer.loaded": "Loaded %d item(s) from %d pattern(s)"
+  "chat.jeipatternizer.loaded": "Loaded %d item(s) from %d pattern(s)",
+  "chat.jeipatternizer.done": "Encoded %d pattern(s)",
+  "chat.jeipatternizer.nothing": "No recipes to encode — bookmark or open a JEI recipe first",
+  "chat.jeipatternizer.no_jei": "JEI is not ready yet",
+  "chat.jeipatternizer.no_blank": "Out of blank patterns",
+  "chat.jeipatternizer.transfer_failed": "Recipe transfer failed",
+  "chat.jeipatternizer.encode_failed": "Pattern encoding failed",
+  "chat.jeipatternizer.move_failed": "Could not move the encoded pattern",
+  "chat.jeipatternizer.mode_failed": "Could not switch the terminal mode",
+  "chat.jeipatternizer.terminal_closed": "Encoding terminal closed",
+  "chat.jeipatternizer.aborted": "Pattern encoding aborted",
+  "chat.jeipatternizer.skipped": "Skipped %s"
 }

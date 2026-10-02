@@ -1,5 +1,16 @@
 {
   "key.categories.jeipatternizer": "JEI 快速编码",
   "key.jeipatternizer.patternize": "编码样板",
-  "chat.jeipatternizer.loaded": "从%2$d个样板中加载了%1$d种物品"
+  "chat.jeipatternizer.loaded": "从%2$d个样板中加载了%1$d种物品",
+  "chat.jeipatternizer.done": "已编码%1$d个样板",
+  "chat.jeipatternizer.nothing": "没有可编码的配方——请先在JEI中打开或书签一个配方",
+  "chat.jeipatternizer.no_jei": "JEI尚未就绪",
+  "chat.jeipatternizer.no_blank": "空白样板不足",
+  "chat.jeipatternizer.transfer_failed": "配方转移失败",
+  "chat.jeipatternizer.encode_failed": "样板编码失败",
+  "chat.jeipatternizer.move_failed": "无法移出已编码的样板",
+  "chat.jeipatternizer.mode_failed": "无法切换终端模式",
+  "chat.jeipatternizer.terminal_closed": "编码终端已关闭",
+  "chat.jeipatternizer.aborted": "样板编码已中止",
+  "chat.jeipatternizer.skipped": "已跳过%1$s"
 }
